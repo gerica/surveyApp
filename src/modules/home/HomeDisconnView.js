@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import I18n from 'react-native-i18n';
 import { View, Text } from 'react-native';
+import { Col, Row, Grid } from 'react-native-easy-grid';
 import IconEntypo from 'react-native-vector-icons/Entypo';
 import IconIonicons from 'react-native-vector-icons/Ionicons';
 import {
@@ -75,14 +76,45 @@ class HomeView extends Component {
                     <Right />
                 </Header>
                 <Content>
-                    <Button transparent>
-                        <IconIonicons
-                            name='ios-arrow-dropright-circle-outline'
-                            style={{ fontSize: 50, }}
-                        />
+                    <Grid>
+                        <Row style={{ marginTop: '10%' }} />
+                        <Row>
+                            <Col />
+                            <Col >
 
-                    </Button>
+                                <Button transparent style={{ marginLeft: '22%' }}>
+                                    <IconIonicons
+                                        name='ios-arrow-dropright-circle-outline'
+                                        style={{ fontSize: 50, }}
+                                    />
+
+                                </Button>
+
+                            </Col>
+                            <Col />
+
+                        </Row>
+                    </Grid>
+
+                    {/*<Grid>
+                        <Col><Text>teste</Text></Col>
+                        <Col />
+                        <Col />
+                        <Col><Text>teste</Text></Col>
+                    </Grid>                    */}
                 </Content>
+                    <View
+                        style={{
+                            flex: 1,
+                            flexDirection: 'column',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <View style={{ width: 50, height: 50, backgroundColor: 'powderblue' }} />
+                        <View style={{ width: 50, height: 50, backgroundColor: 'skyblue' }} />
+                        <View style={{ width: 50, height: 50, backgroundColor: 'steelblue' }} />
+                    </View>
                 <Footer>
                     <FooterTab>
                         <Button full>
